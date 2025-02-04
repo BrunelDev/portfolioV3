@@ -1,3 +1,4 @@
+"use client";
 import { ExperienceComponent } from "@/app/_components/experience";
 import { Navbar } from "@/app/_components/navbar";
 import { ProjectCard } from "@/app/_components/projectCard";
@@ -7,12 +8,17 @@ import {
   GraduationCap,
   Laptop,
   LaptopMinimal,
-  Mail,
+  LayoutGrid,
+  Mail, Infinity,
+  Terminal
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import StackIcon from "tech-stack-icons";
 import { Achievements } from "./_components/achievements";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 export default function Home() {
   const skills = [
@@ -102,6 +108,9 @@ export default function Home() {
     { title: "React Native", icon: "/react-native.svg" },
     { title: "express", icon: "/express.svg" },
   ];
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div className="w-full">
       <div className="h-screen flex flex-col bg-[#151718] text-gray-100 w-full">
@@ -119,32 +128,45 @@ export default function Home() {
             </div>
           </div>
           <div className="flex justify-center items-center gap-2 flex-col">
+            <div className="w-fit h-fit" data-aos="fade-down" data-aos-duration="500">
             <Theme
-              title="digital"
+              title="Digital"
               icon={LaptopMinimal}
               color="#F2555A"
               backgroundColor="#3C181A"
             />
+            </div>
+            
             <div className="flex justify-center items-center flex-row space-x-3">
+              <div className="w-fit h-fit" data-aos="fade-right" data-aos-duration="500">
               <Theme
-                title="software"
-                icon={LaptopMinimal}
+                title="Software"
+                icon={LayoutGrid}
                 color={"#FF802B"}
                 backgroundColor={"#391A03"}
               />
+              </div>
+              <div className="w-fit h-fit" data-aos="fade-left" data-aos-duration="500">
+                
               <Theme
-                title="programmer"
-                icon={LaptopMinimal}
+                title="Devops"
+                icon={Infinity}
                 color="#3CB179"
                 backgroundColor="#0F291E"
               />
+
+              </div>
+              
             </div>
-            <Theme
-              title="developer"
-              icon={LaptopMinimal}
+            <div className="w-fit h-fit" data-aos="fade-up" data-aos-duration="500">
+              <Theme
+              title="Development"
+              icon={Terminal}
               color="#369EFF"
               backgroundColor="#10243E"
             />
+            </div>
+            
           </div>
           <p className="max-w-600px md:text-2xl text-lg text-center mt-2 px-5 text-gray-400">
             I create web apps that are engaging, accessible and scalable.
@@ -255,9 +277,9 @@ export default function Home() {
         </div>
       </section>
       <section className="flex justify-center items-center mt-20 px-4 sm:px-0 pb-20">
-        <div className="w-full sm:w-[90%] md:w-[800px] mx-auto  h-fit pl-">
+        <div className="w-full sm:w-[90%] md:w-[800px] mx-auto  h-fit pl-6">
           <div className="border-l-2 border-[#26292B] -translate-x-[20px] sm:-translate-x-[20px]">
-            <div className="-translate-x-[20px] pt-10">
+            <div className="-translate-x-[20px]">
               {" "}
               <ExperienceComponent
                 title="Web Developer Intern at 3D Tech 💻 - Aug 2024 (2 months)"
