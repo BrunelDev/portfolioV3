@@ -42,7 +42,6 @@ import {
   TypeScript,
   WordPress,
 } from "developer-icons";
-import Head from "next/head";
 import { Achievements } from "./_components/achievements";
 
 export default function Home() {
@@ -265,12 +264,7 @@ export default function Home() {
   ];
   return (
     <>
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="LlVYnhw4jbz07ulgU0czKmNT1tut8HaF9TFUtF7r1Pk"
-        />
-      </Head>
+     
       <div className="w-full">
         <div className="h-screen flex flex-col bg-[#151718] text-gray-100 w-full">
           <div className="w-full fixed top-0 left-0 z-50">
