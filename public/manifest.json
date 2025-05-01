@@ -1,0 +1,16 @@
+{
+    "name": "Brunel Ahokpossi Portfolio",
+    "short_name": "Brunel Dev",
+    "description": "Software developer specializing in web development, mobile apps, and DevOps",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#151718",
+    "theme_color": "#151718",
+    "icons": [
+      {
+        "src": "/favicon.ico",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/x-icon"
+      }
+    ]
+  }

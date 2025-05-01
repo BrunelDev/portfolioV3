@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio-3-0-rmvs.onrender.com/sitemap.xml

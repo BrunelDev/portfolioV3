@@ -14,7 +14,7 @@ export function Achievements({
   link,
 }: AchievementsProps) {
   return (
-    <Link href={link} className="group w-full flex flex-col gap-2">
+    <Link href={link} className="group w-full flex flex-col gap-2" target="blank">
       <h6 className="text-[#999FA4] font-semibold sm:text-lg group-hover:underline">
         <span className="text-white">{title}</span>
         <span className="font-semibold sm:text-lg">-{source}</span>
