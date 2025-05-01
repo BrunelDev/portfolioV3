@@ -1,8 +1,8 @@
 {
-    "name": "Brunel Ahokpossi Portfolio",
+    "name": "Brunel Ahokpossi, Web and mobile dev, Devops enthusiast Portfolio",
     "short_name": "Brunel Dev",
     "description": "Software developer specializing in web development, mobile apps, and DevOps",
-    "start_url": "/",
+    "start_url": "https://brunel-dev.vercel.app/",
     "display": "standalone",
     "background_color": "#151718",
     "theme_color": "#151718",

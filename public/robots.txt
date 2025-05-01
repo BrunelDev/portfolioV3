@@ -1,3 +1,12 @@
 User-agent: *
 Allow: /
-Sitemap: https://portfolio-3-0-rmvs.onrender.com/sitemap.xml
+Allow: /images/
+Allow: /static/
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap
+Sitemap: https://brunel-dev.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
