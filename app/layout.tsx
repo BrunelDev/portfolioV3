@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Head from "next/head";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,6 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: 'LlVYnhw4jbz07ulgU0czKmNT1tut8HaF9TFUtF7r1Pk',
+  },
   title: "Brunel Ahokpossi | Software Developer",
   description:
     "Software developer specializing in web development, mobile apps, and DevOps. Experienced with React, Next.js, Django, AWS and more.",
@@ -64,12 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="LlVYnhw4jbz07ulgU0czKmNT1tut8HaF9TFUtF7r1Pk"
-        />
-      </Head>
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#151718]`}
       >
