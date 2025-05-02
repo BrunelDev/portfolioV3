@@ -210,56 +210,56 @@ export default function Home() {
       title: "Online Laundry Service Platform",
       description:
         "A web-based laundry service booking platform built with React and Next.js. Features include service scheduling, real-time booking management, and automated notifications.",
-      link: "https://github.com/yourusername/laundry-service",
+      link: "https://github.com/bruneldev/laundry-service",
     },
     {
       image: "/chat.png",
       title: "Real-time Chat Application",
       description:
         "A scalable instant messaging platform supporting 50+ concurrent users, built with WebSocket for real-time communication, Clerk for authentication, and React/Next.js for the frontend.",
-      link: "https://github.com/yourusername/chat-app",
+      link: "https://github.com/bruneldev/chat-app",
     },
     {
       image: "/tasks.png",
       title: "Collaborative Task Management",
       description:
         "A full-stack task management application with REST API backend (Prisma/PostgreSQL) and React/Next.js frontend. Enables team collaboration, task tracking, and project organization.",
-      link: "https://github.com/yourusername/task-manager",
+      link: "https://github.com/bruneldev/task-manager",
     },
     {
       image: "/portfolio.png",
       title: "Personal Portfolio",
       description:
         "An SEO-optimized interactive personal website showcasing my work and skills, built with Next.js and styled with Tailwind CSS.",
-      link: "https://github.com/yourusername/portfolio",
+      link: "https://github.com/bruneldev/portfolio",
     },
     {
       image: "/unisafe.png",
       title: "Unisafe+",
       description:
         "A React Native mobile application designed for reporting harassment incidents, featuring anonymous reporting, incident tracking, and support resources.",
-      link: "https://github.com/yourusername/unisafe-plus",
+      link: "https://github.com/bruneldev/unisafe-plus",
     },
     {
       image: "/cinemax.png",
       title: "Cinemax",
       description:
         "A digital movie ticket booking application for Benin's cinemas, built with React Native. Features include seat selection, payment integration, and digital ticket management.",
-      link: "https://github.com/yourusername/cinemax",
+      link: "https://github.com/bruneldev/cinemax",
     },
     {
       image: "/zemi.png",
       title: "Zemi",
       description:
         "A React Native application for booking zemidjan (motorcycle taxi) rides in Benin, featuring real-time tracking, fare estimation, and secure payments.",
-      link: "https://github.com/yourusername/zemi",
+      link: "https://github.com/bruneldev/zemi",
     },
     {
       image: "/leave.png",
       title: "Leave Manager",
       description:
         "A mobile application for corporate leave management, streamlining leave requests, approvals, and tracking employee time-off balances.",
-      link: "https://github.com/yourusername/leave-manager",
+      link: "https://github.com/bruneldev/leave-manager",
     },
   ];
   return (
