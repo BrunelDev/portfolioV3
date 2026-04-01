@@ -17,21 +17,15 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import {
-  Appwrite,
   AWS,
-  Django,
   Docker,
-  ExpressJsLight,
   FastAPI,
-  Firebase,
   Git,
   GitHubDark,
   JavaScript,
-  Kotlin,
-  Kubernetes,
   MongoDB,
   NextJs,
   NodeJs,
@@ -40,7 +34,6 @@ import {
   TailwindCSS,
   Terraform,
   TypeScript,
-  WordPress,
 } from "developer-icons";
 import { Achievements } from "./_components/achievements";
 
@@ -61,10 +54,6 @@ export default function Home() {
     },
     // Backend
     {
-      title: "Django",
-      icon: <Django style={{ width: 50, height: 50 }} />,
-    },
-    {
       title: "FastAPi",
       icon: <FastAPI style={{ width: 50, height: 50 }} />,
     },
@@ -72,20 +61,8 @@ export default function Home() {
       title: "Node.js",
       icon: <NodeJs style={{ width: 50, height: 50 }} />,
     },
-    {
-      title: "ExpressJs",
-      icon: <ExpressJsLight style={{ width: 50, height: 50 }} />,
-    },
 
     // Cloud & Infrastructure
-    {
-      title: "Firebase",
-      icon: <Firebase style={{ width: 50, height: 50 }} />,
-    },
-    {
-      title: "Appwrite",
-      icon: <Appwrite style={{ width: 50, height: 50 }} />,
-    },
     {
       title: "Docker",
       icon: <Docker style={{ width: 50, height: 50 }} />,
@@ -94,23 +71,12 @@ export default function Home() {
       title: "AWS",
       icon: <AWS style={{ width: 50, height: 50 }} />,
     },
-    {
-      title: "Kubernetes",
-      icon: <Kubernetes style={{ width: 50, height: 50 }} />,
-    },
-    {
-      title: "WordPress",
-      icon: <WordPress style={{ width: 50, height: 50 }} />,
-    },
+
     {
       title: "Terraform",
       icon: <Terraform style={{ width: 50, height: 50 }} name="terraform" />,
     },
     // Languages
-    {
-      title: "Kotlin",
-      icon: <Kotlin style={{ width: 50, height: 50 }} />,
-    },
     {
       title: "Python",
       icon: <Python style={{ width: 50, height: 50 }} />,
@@ -147,13 +113,6 @@ export default function Home() {
     AOS.init();
   }, []);
   const achievements = [
-    {
-      title: "Programming Fundamentals in Kotlin",
-      source: "- Meta (Coursera)",
-      description:
-        "Mastered Kotlin programming fundamentals through Meta's comprehensive course, covering object-oriented programming, functional programming concepts, and Android development basics.",
-      link: "https://www.coursera.org/account/accomplishments/records/8NCHCC8VZZFO",
-    },
     {
       title: "Python for Data Science, AI & Development",
       source: "- IBM (Coursera)",
@@ -204,64 +163,105 @@ export default function Home() {
       link: "https://www.codingame.com/certification/2dfp9CFgj8dJ4EK5boNe5g",
     },
   ];
+  const [filter, setFilter] = useState("tout");
+
   const projects = [
     {
-      image: "/laundry.png",
-      title: "Online Laundry Service Platform",
+      image:
+        "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop",
+      title: "Educo",
+      category: "web",
       description:
-        "A web-based laundry service booking platform built with React and Next.js. Features include service scheduling, real-time booking management, and automated notifications.",
+        "A collaborative web platform designed for academic coordination and management, streamlining communication and task organization within educational environments.",
+      link: "https://github.com/bruneldev/educo",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
+      title: "Boucles en Poésie",
+      category: "mobile",
+      description:
+        "A specialized mobile application providing personalized hair care recommendations and routines for natural curls and textures.",
+      link: "https://github.com/bruneldev/boucles-en-poesie",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop",
+      title: "Commodore",
+      category: "mobile",
+      description:
+        "A mobile application for ordering taxi boats with real-time geolocation tracking, connecting passengers with boat operators efficiently.",
+      link: "https://github.com/bruneldev/commodore",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
+      title: "SafeDeal (In progress)",
+      category: "mobile",
+      description:
+        "A secure marketplace for selling and buying smartphones, featuring verified transactions and safety protocols for users.",
+      link: "https://github.com/bruneldev/safedeal",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+      title: "Automatic Slide Generator",
+      category: "web",
+      description:
+        "An automated tool for generating personalized presentation slides, integrated into a systematic automation workflow with Airtable data storage.",
+      link: "https://github.com/bruneldev/slide-generator",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1561414927-6d86591d0c4f?q=80&w=800&auto=format&fit=crop",
+      title: "Live Com (On hold)",
+      category: "web",
+      description:
+        "A comprehensive web platform for online sales and auctions, featuring real-time bidding systems and product management.",
+      link: "https://github.com/bruneldev/live-com",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=800&auto=format&fit=crop",
+      title: "Online Laundry Service Platform",
+      category: "web",
+      description:
+        "A web-based laundry service booking platform built with React and Next.js. Features include service scheduling and real-time booking management.",
       link: "https://github.com/bruneldev/laundry-service",
     },
     {
-      image: "/chat.png",
+      image:
+        "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800&auto=format&fit=crop",
       title: "Real-time Chat Application",
+      category: "web",
       description:
-        "A scalable instant messaging platform supporting 50+ concurrent users, built with WebSocket for real-time communication, Clerk for authentication, and React/Next.js for the frontend.",
+        "A scalable instant messaging platform supporting real-time communication with WebSocket, featuring Clerk for secure authentication.",
       link: "https://github.com/bruneldev/chat-app",
     },
     {
-      image: "/tasks.png",
+      image:
+        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop",
       title: "Collaborative Task Management",
+      category: "web",
       description:
-        "A full-stack task management application with REST API backend (Prisma/PostgreSQL) and React/Next.js frontend. Enables team collaboration, task tracking, and project organization.",
+        "A full-stack task management application with REST API backend and React frontend, enabling team collaboration and project tracking.",
       link: "https://github.com/bruneldev/task-manager",
     },
     {
-      image: "/portfolio.png",
-      title: "Personal Portfolio",
-      description:
-        "An SEO-optimized interactive personal website showcasing my work and skills, built with Next.js and styled with Tailwind CSS.",
-      link: "https://github.com/bruneldev/portfolio",
-    },
-    {
-      image: "/unisafe.png",
-      title: "Unisafe+",
-      description:
-        "A React Native mobile application designed for reporting harassment incidents, featuring anonymous reporting, incident tracking, and support resources.",
-      link: "https://github.com/bruneldev/unisafe-plus",
-    },
-    {
-      image: "/cinemax.png",
-      title: "Cinemax",
-      description:
-        "A digital movie ticket booking application for Benin's cinemas, built with React Native. Features include seat selection, payment integration, and digital ticket management.",
-      link: "https://github.com/bruneldev/cinemax",
-    },
-    {
-      image: "/zemi.png",
-      title: "Zemi",
-      description:
-        "A React Native application for booking zemidjan (motorcycle taxi) rides in Benin, featuring real-time tracking, fare estimation, and secure payments.",
-      link: "https://github.com/bruneldev/zemi",
-    },
-    {
-      image: "/leave.png",
+      image:
+        "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=800&auto=format&fit=crop",
       title: "Leave Manager",
+      category: "mobile",
       description:
-        "A mobile application for corporate leave management, streamlining leave requests, approvals, and tracking employee time-off balances.",
+        "A corporate mobile application for leave management, streamlining requests and tracking employee time-off balances.",
       link: "https://github.com/bruneldev/leave-manager",
     },
   ];
+
+  const filteredProjects = projects.filter((project) => {
+    if (filter === "tout") return true;
+    return project.category === filter;
+  });
   return (
     <div className="w-full">
       <div className="h-screen flex flex-col bg-[#151718] text-gray-100 w-full">
@@ -350,11 +350,14 @@ export default function Home() {
                 />
               </div>
             </Link>
-            <Link href={"https://github.com/BrunelDev"} target="blank">
+            <Link
+              href={"https://www.linkedin.com/in/brunel-ahokpossi/"}
+              target="blank"
+            >
               <div className="bg-[#26292B] p-3 rounded-full hover:scale-110 duration-200">
                 <Image
                   src={"linkedin.svg"}
-                  alt="github icon"
+                  alt="linkedin icon"
                   width={25}
                   height={25}
                 />
@@ -384,9 +387,8 @@ export default function Home() {
                 I&apos;m a third-year software engineering student, soon
                 graduating, with over two years of hands-on experience building
                 modern, scalable, and accessible web applications. I specialize
-                in Next.js, React Native, Django, FastAPI, MongoDb and
-                PostgreSQL and I love working with Node.js and lightweight
-                databases like SQLite.
+                in Next.js, React Native, FastAPI, MongoDb and PostgreSQL and I
+                love working with Node.js and lightweight databases like SQLite.
               </p>
             </div>
             <div className="text-gray-400 text-lg indent-10 text-justify">
@@ -445,6 +447,13 @@ export default function Home() {
               {" "}
               <div data-aos="fade-right">
                 <ExperienceComponent
+                  title="Web Developer at Novek AI - April 2025 to Jan 2026"
+                  description="Full-stack development of cutting-edge web applications and AI-integrated solutions. Responsible for designing robust backend architectures and optimizing frontend user experiences to ensure high performance and scalability."
+                  icon={Laptop}
+                />
+              </div>
+              <div data-aos="fade-right">
+                <ExperienceComponent
                   title="Web Developer Intern at 3D Tech 💻 - Aug 2024 (2 months)"
                   description="Gained practical experience in web development through hands-on projects. Collaborated with senior developers to implement modern web solutions and best practices in software development."
                   icon={Laptop}
@@ -469,8 +478,23 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-20 px-4 sm:px-0 pb-20">
+        <div className="flex justify-center items-center gap-4 mb-10">
+          {["tout", "web", "mobile"].map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`px-6 py-2 rounded-full border-2 capitalize duration-200 ${
+                filter === cat ?
+                  "bg-[#26292B] border-[#999FA4] text-white"
+                : "bg-transparent border-[#2F3335] text-[#999FA4] hover:border-[#999FA4]"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full sm:w-[90%] md:w-[800px] mx-auto">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <ProjectCard
               key={index}
               image={project.image}
