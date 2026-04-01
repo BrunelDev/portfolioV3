@@ -163,7 +163,7 @@ export default function Home() {
       link: "https://www.codingame.com/certification/2dfp9CFgj8dJ4EK5boNe5g",
     },
   ];
-  const [filter, setFilter] = useState("tout");
+  const [filter, setFilter] = useState("all");
 
   const projects = [
     {
@@ -259,7 +259,7 @@ export default function Home() {
   ];
 
   const filteredProjects = projects.filter((project) => {
-    if (filter === "tout") return true;
+    if (filter === "all") return true;
     return project.category === filter;
   });
   return (
@@ -479,7 +479,7 @@ export default function Home() {
       </section>
       <section className="mt-20 px-4 sm:px-0 pb-20">
         <div className="flex justify-center items-center gap-4 mb-10">
-          {["tout", "web", "mobile"].map((cat) => (
+          {["all", "web", "mobile"].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
